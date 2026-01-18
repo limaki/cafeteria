@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menú - Cafetería</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrap headerInner">
+      <div class="brand">
+        <div class="brandMark">☕</div>
+        <div>
+          <h1 class="brandName">Cafetería Maru</h1>
+          <p class="brandTag">Menú</p>
+        </div>
+      </div>
+
+      <div class="headerRight">
+        <span class="badge">WiFi: MaruCafe</span>
+        <span class="badge">🕒 8:00–20:00</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls">
+      <div id="chips" class="chips"></div>
+    </section>
+
+    <section id="menu" class="grid"></section>
+
+    <footer class="footer">
+      <p class="muted">
+        *Precios sujetos a cambios. Consultá por opciones sin TACC.
+      </p>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <dialog id="modal" class="modal">
+    <form method="dialog" class="modalCard">
+      <div class="modalTop">
+        <div>
+          <h3 id="mTitle" class="mTitle"></h3>
+          <p id="mDesc" class="muted mDesc"></p>
+        </div>
+        <button class="close" aria-label="Cerrar">✕</button>
+      </div>
+
+      <div class="modalMid">
+        <img id="mImg" class="mImg" alt="" />
+        <div class="modalInfo">
+          <div class="line">
+            <span id="mCat" class="pill"></span>
+            <strong id="mPrice" class="price"></strong>
+          </div>
+
+          <div id="mExtrasWrap" class="extras">
+            <h4>Opcionales</h4>
+            <div id="mExtras" class="extrasList"></div>
+          </div>
+
+          <label class="label" for="mNote">Notas</label>
+          <textarea id="mNote" class="note" rows="3"
+            placeholder="Sin azúcar, extra caliente, etc."></textarea>
+        </div>
+      </div>
+
+      <div class="modalBottom">
+        <button id="btnCopy" type="button" class="btn primary">Copiar pedido</button>
+        <button class="btn">Cerrar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
