@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Menú - Cafetería</title>
+  <title>Menú - Cafetería Green</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -13,13 +13,13 @@
       <div class="brand">
         <div class="brandMark">☕</div>
         <div>
-          <h1 class="brandName">Cafetería Maru</h1>
+          <h1 class="brandName">Cafetería Green</h1>
           <p class="brandTag">Menú</p>
         </div>
       </div>
 
       <div class="headerRight">
-        <span class="badge">WiFi: MaruCafe</span>
+        <span class="badge">WiFi: CafeteriaGreen</span>
         <span class="badge">🕒 8:00–20:00</span>
       </div>
     </div>
@@ -33,13 +33,11 @@
     <section id="menu" class="grid"></section>
 
     <footer class="footer">
-      <p class="muted">
-        *Precios sujetos a cambios. Consultá por opciones sin TACC.
-      </p>
+      <p class="muted">*Precios sujetos a cambios. Consultá por opciones sin TACC.</p>
     </footer>
   </main>
 
-  <!-- Modal -->
+  <!-- MODAL -->
   <dialog id="modal" class="modal">
     <form method="dialog" class="modalCard">
       <div class="modalTop">
@@ -47,31 +45,30 @@
           <h3 id="mTitle" class="mTitle"></h3>
           <p id="mDesc" class="muted mDesc"></p>
         </div>
-        <button class="close" aria-label="Cerrar">✕</button>
+        <button class="close" value="cancel" aria-label="Cerrar">✕</button>
       </div>
 
-      <div class="modalMid">
+      <div class="modalBody">
         <img id="mImg" class="mImg" alt="" />
+
         <div class="modalInfo">
           <div class="line">
             <span id="mCat" class="pill"></span>
             <strong id="mPrice" class="price"></strong>
           </div>
 
+          <h4 class="sectionTitle">Descripción</h4>
+          <p id="mLong" class="longText"></p>
+
           <div id="mExtrasWrap" class="extras">
-            <h4>Opcionales</h4>
+            <h4 class="sectionTitle">Opcionales</h4>
             <div id="mExtras" class="extrasList"></div>
           </div>
-
-          <label class="label" for="mNote">Notas</label>
-          <textarea id="mNote" class="note" rows="3"
-            placeholder="Sin azúcar, extra caliente, etc."></textarea>
         </div>
       </div>
 
       <div class="modalBottom">
-        <button id="btnCopy" type="button" class="btn primary">Copiar pedido</button>
-        <button class="btn">Cerrar</button>
+        <button class="btn primary" value="cancel">Cerrar</button>
       </div>
     </form>
   </dialog>
